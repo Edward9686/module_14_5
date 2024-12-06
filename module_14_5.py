@@ -36,7 +36,7 @@ kbi.add(buttoni, buttoni1)
 kbi2.add(but1, but2, but3, but4)
 
 
-@dp.message_handler(text='Купить')
+@dp.message_handler(text='Купить!')
 async def handle_buy_button(message):
     await get_buying_list(message)
 
@@ -64,7 +64,7 @@ async def send_confirm_message(call):
     await call.answer()
 
 
-@dp.message_handler(text='Расчитать')
+@dp.message_handler(text='Расчитать...')
 async def main_menu(message):
     await message.answer('Выберите опцию:', reply_markup=kbi)
 
